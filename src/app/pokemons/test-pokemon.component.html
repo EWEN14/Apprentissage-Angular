@@ -1,0 +1,9 @@
+<!-- Input qui enclenchera un event à chaque fois qu'on relâche touche du clavier.
+Il faut bien mettre $event, car objet natif, pour dire qu'il y aura un évenement, et pas un autre nom de variable. -->
+<!--<input (keyup)="relacheClavier($event)" placeholder="Inscrivez votre nom ici">
+<p>{{ bonjour }}</p>-->
+
+<!--Manière plus simple d'écrire, en définissant une variable locale, ici boite-->
+<input #boite (keyup)="relacheClavier(boite.value)" placeholder="Inscrivez votre nom ici">
+<p>{{ boite.value }} --> ici on réutilise uniquement la valeur passée dans l'input.</p>
+<p>{{ bonjour }} --> ici on récupère le texte de la variable modifiée bonjour.</p>

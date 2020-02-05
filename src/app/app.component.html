@@ -1,0 +1,16 @@
+<nav>
+  <div class="nav-wrapper teal">
+    <a href="#" class="brand-logo center">Application de Pokémons</a>
+  </div>
+</nav>
+
+<input #boite (keyup.enter)="relacheClavier(boite.value)" (blur)="relacheClavier(boite.value)" placeholder="Inscrivez votre nom ici">
+<p>{{ boite.value }} --> ici on réutilise uniquement la valeur passée dans l'input.</p>
+<p>{{ bonjour }} --> ici on récupère le texte de la variable modifiée bonjour.</p>
+
+<input #champ (keyup.enter)="checkage(champ.value)" placeholder="Inscrivez votre âge ici">
+<p *ngIf="age > 18">Vous êtes majeur. Vous pouvez voter maintenant !</p>
+<p *ngIf="age <= 17">Vous êtes mineur. Vous ne pouvez pas aller au casino.</p>
+
+<router-outlet></router-outlet>
+
